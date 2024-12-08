@@ -3,6 +3,9 @@ package views;
 
 import java.util.Scanner;
 
+import controller.ejercicios.Autos;
+import controller.ejercicios.Serie;
+
 public class main {
     private static Scanner scanner = new Scanner(System.in);
 
@@ -11,7 +14,7 @@ public class main {
         int salida = 0;
         do {
 
-            System.out.println("Elige una opción:");
+            System.out.println("Elige una opción: ");
             System.out.println("1. Compañia de Autos Usados.");
             System.out.println("2. Llamadas Telefónicas Internacionales.");
             System.out.println("3. Agua Potable - Loja.");
@@ -24,7 +27,8 @@ public class main {
                     break;
 
                 case 1: {
-
+                    Autos autos = new Autos();
+                    autos.iniciarRegistro();
                     break;
                 }
                 case 2: {
@@ -36,7 +40,8 @@ public class main {
                     break;
                 }
                 case 4: {
-                    System.out.println("Generar serie");
+                    Serie serie = new Serie();
+                    serie.generarSerie();
                     break;
                 }
                 default:
