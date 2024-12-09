@@ -3,7 +3,9 @@ package views;
 
 import java.util.Scanner;
 
+import controller.ejercicios.AguaPotable;
 import controller.ejercicios.Autos;
+import controller.ejercicios.Llamada;
 import controller.ejercicios.Serie;
 
 public class main {
@@ -32,11 +34,12 @@ public class main {
                     break;
                 }
                 case 2: {
-                    System.out.println("Llamadas Telefónicas Internacionales.");
+                    Llamada llamada = new Llamada();
+                    llamada.calcularCostoLlamada(scanner);
                     break;
                 }
                 case 3: {
-                    System.out.println("La Empresa Municipal de agua potable de Loja.");
+                    AguaPotable.calcularFactura(scanner);
                     break;
                 }
                 case 4: {
