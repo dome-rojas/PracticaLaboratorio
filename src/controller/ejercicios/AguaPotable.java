@@ -65,23 +65,23 @@ public class AguaPotable {
         return costoExceso;
     }
 
-    public static void calcularFactura(Scanner tcl) {
+    public static void calcularFactura(Scanner scanner) {
         String continuar;
 
         do {
             System.out.println("¿El contribuyente pertenece a la tercera edad? (s/n):");
-            String esAdultoMayor = tcl.next();
+            String esAdultoMayor = scanner.next();
             float subtotal = 0;
 
             if (esAdultoMayor.equalsIgnoreCase("s")) {
-                subtotal = calcularPrecioAdultoMayor(tcl);
+                subtotal = calcularPrecioAdultoMayor(scanner);
             } else {
                 System.out.println("¿El contribuyente tiene alguna discapacidad? (s/n):");
-                String tieneDiscapacidad = tcl.next();
+                String tieneDiscapacidad = scanner.next();
                 if (tieneDiscapacidad.equalsIgnoreCase("s")) {
-                    subtotal = calcularPrecioConDiscapacidad(tcl);
+                    subtotal = calcularPrecioConDiscapacidad(scanner);
                 } else {
-                    subtotal = calcularPrecioNormal(tcl);
+                    subtotal = calcularPrecioNormal(scanner);
                 }
             }
 
@@ -100,7 +100,7 @@ public class AguaPotable {
             System.out.println("TOTAL A PAGAR: $" + total);
 
             System.out.println("\n¿Desea calcular otra factura? (s/n):");
-            continuar = tcl.next();
+            continuar = scanner.next();
         } while (continuar.equalsIgnoreCase("s"));
     }
 }

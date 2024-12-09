@@ -3,9 +3,8 @@ package controller.ejercicios;
 import java.util.Scanner;
 
 public class Autos {
-    public void iniciarRegistro() {
-        Scanner scanner = new Scanner(System.in);
 
+    public void iniciarRegistro(Scanner scanner) {
         Empleado empleado1 = new Empleado();
         empleado1.nombre = "Empleado 1";
 
@@ -49,7 +48,5 @@ public class Autos {
         empleado1.imprimirInforme();
         empleado2.imprimirInforme();
         empleado3.imprimirInforme();
-
-        scanner.close();
     }
 }

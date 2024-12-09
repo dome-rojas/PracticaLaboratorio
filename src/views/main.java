@@ -30,7 +30,7 @@ public class main {
 
                 case 1: {
                     Autos autos = new Autos();
-                    autos.iniciarRegistro();
+                    autos.iniciarRegistro(scanner);
                     break;
                 }
                 case 2: {
@@ -44,7 +44,7 @@ public class main {
                 }
                 case 4: {
                     Serie serie = new Serie();
-                    serie.generarSerie();
+                    serie.generarSerie(scanner);
                     break;
                 }
                 default:
@@ -52,5 +52,7 @@ public class main {
                     break;
             }
         } while (salida != 0);
+
+        scanner.close();
     }
 }

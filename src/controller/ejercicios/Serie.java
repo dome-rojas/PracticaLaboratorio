@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class Serie {
 
-    public void generarSerie() {
+    public void generarSerie(Scanner scanner) {
         // Variables para el cálculo de la serie
         int auxiliar = 1, fibo = 1, suma, contador;
         int numero = 1; // El primer número del denominador
         int indice = 2; // El primer exponente
         int signo = 1; // Para alternar los signos entre los términos (1 para positivo, -1 para
                        // negativo)
-        Scanner scanner = new Scanner(System.in);
 
         // Solicitar al usuario cuántos términos de la serie desea ver
         System.out.println("¿Cuántos números de la serie desea ver? (sin el 0): ");
