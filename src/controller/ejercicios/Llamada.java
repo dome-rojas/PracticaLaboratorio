@@ -43,32 +43,31 @@ public class Llamada {
 
     public void calcularCostoLlamada(Scanner scanner) {
         System.out.println("Selecciona la zona de destino:");
+
         for (Zona zona : Zona.values()) {
-            System.out.println(
-                    zona.getClave() + " - " + zona.name().replace('_', ' ') + " (Clave " + zona.getClave() + ")");
+
+            System.out.print(
+                    "\n" + zona.getClave() + " - " + zona.name().replace('_', ' ') + " (Clave " + zona.getClave()
+                            + ")");
         }
 
-        // Leer la clave de la zona seleccionada
-        System.out.print("Ingresa la clave de la zona seleccionada: ");
+        System.out.print("\nIngresa la clave de la zona seleccionada: ");
         int clave = scanner.nextInt();
 
         Zona zonaSeleccionada = Zona.getZonaClave(clave);
 
         if (zonaSeleccionada == null) {
             System.out.println("Clave no válida. Elija una clave de la lista.");
-            return; // Termina el método si la clave es inválida
+            return;
         }
 
-        // Leer el número de minutos
-        System.out.print("Ingresa el número de minutos de la llamada: ");
+        System.out.print("\nIngresa el número de minutos de la llamada: ");
         float minutos = scanner.nextFloat();
 
-        // Calcular el costo total
         float costoTotal = zonaSeleccionada.getPrecioPorMinuto() * minutos;
 
-        // Mostrar los resultados
         System.out.println("Zona de destino: " + zonaSeleccionada.name().replace('_', ' '));
         System.out.println("Valor por minuto: $" + zonaSeleccionada.getPrecioPorMinuto());
-        System.out.printf("Costo total de la llamada: $", costoTotal);
+        System.out.print("Costo total de la llamada: $" + costoTotal);
     }
 }

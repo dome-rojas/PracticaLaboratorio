@@ -16,7 +16,7 @@ public class main {
         int salida = 0;
         do {
 
-            System.out.println("Elige una opción: ");
+            System.out.println("\n\nElige una opción: ");
             System.out.println("1. Compañia de Autos Usados.");
             System.out.println("2. Llamadas Telefónicas Internacionales.");
             System.out.println("3. Agua Potable - Loja.");
@@ -44,7 +44,7 @@ public class main {
                 }
                 case 4: {
                     Serie serie = new Serie();
-                    serie.generarSerie(scanner);
+                    serie.ejecutar(scanner);
                     break;
                 }
                 default:
